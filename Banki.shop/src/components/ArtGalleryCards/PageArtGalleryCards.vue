@@ -2,7 +2,7 @@
   <main>
     <h2>Картины эпохи Возрождения</h2>
     <div class="cards">
-      <GalleryCard />
+      <GalleryCard :imageSrc="'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg'" :name="'«Рождение Венеры» Сандро Боттичелли'" :price="'1 000 000$'" />
     </div>
   </main>
 </template>
