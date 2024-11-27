@@ -1,0 +1,47 @@
+.art-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+  border: 1px solid #E1E1E1;
+}
+
+.art-card__image {
+  max-height: 160px;
+  height: 100%;
+}
+
+.art-card__name {
+  font-size: 18px;
+  color: #343030
+}
+
+.art-card__contain {
+  padding: 20px 24px 24px;
+}
+
+.art-card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.art-card__price__old {
+  color: #A0A0A0;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.art-card__price__new {
+  color: #343030;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.art-card__buy-button {
+  color: #F4F6F9;
+  background-color: #382E2B;
+  padding: 14px 30px 13px;
+  font-size: 14px;
+  font-weight: 700;
+}

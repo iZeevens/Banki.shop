@@ -1,13 +1,17 @@
+<!-- Change contain -->
 <template>
   <div class="art-card">
     <img class="art-card__image" :src="imageSrc" />
-    <span class="art-card__name">{{ name }}</span>
-    <div class="art-card__details">
-      <div class="art-card__price">
-        <span>{{ price }}</span>
-      </div>
-      <div class="art-card__action">
-        <button class="art-card__buy-button">Купить</button>
+    <div class="art-card__contain">
+      <span class="art-card__name">{{ name }}</span>
+      <div class="art-card__details">
+        <div class="art-card__price">
+          <span class="art-card__price__old">{{ oldPrice }}</span>
+          <span class="art-card__price__new">{{ newPrice }}</span>
+        </div>
+        <div class="art-card__action">
+          <button class="art-card__buy-button">Купить</button>
+        </div>
       </div>
     </div>
   </div>
@@ -27,9 +31,13 @@ export default Vue.extend({
       type: String,
       required: true,
     },
-    price: {
+    newPrice: {
       type: String,
       required: true,
+    },
+    oldPrice: {
+      type: String,
+      required: false,
     },
   },
 });
