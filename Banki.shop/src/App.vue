@@ -1,14 +1,19 @@
 <template>
   <div id="app">
-    <h1>Hello</h1>
+    <PageHeader />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 
+import PageHeader from './components/Header/PageHeader.vue';
+
 export default Vue.extend({
   name: 'App',
+  components: {
+    PageHeader,
+  },
 });
 </script>
 
