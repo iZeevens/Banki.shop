@@ -2,6 +2,10 @@
   font-family: "Merriweather", serif;
 }
 
+body {
+  background-color: #F6F3F3;
+}
+
 #app {
   max-width: 1216px;
   margin: 0 auto;
