@@ -1,0 +1,6 @@
+#app {
+  font-family: "Merriweather", serif;
+  display: flex;
+  max-width: 1216px;
+  margin: 0 auto;
+}
