@@ -6,8 +6,8 @@
 
 <script lang="ts">
 import Vue from 'vue';
-
 import PageHeader from './components/Header/PageHeader.vue';
+import './app.css';
 
 export default Vue.extend({
   name: 'App',
@@ -16,12 +16,3 @@ export default Vue.extend({
   },
 });
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

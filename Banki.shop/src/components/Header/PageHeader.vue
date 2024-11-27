@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import './pageHeader.css';
 export default {
   name: 'PageHeader',
 };
