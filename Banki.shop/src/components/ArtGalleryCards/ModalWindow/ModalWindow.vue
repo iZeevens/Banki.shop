@@ -2,6 +2,7 @@
   <div>
     <div class="modal-overlay" v-if="isVisible" @click="closeModal"></div>
     <div class="modal" v-if="isVisible">
+      <button class="modal__close-button" @click="closeModal">X</button>
       <span class="modal__name">{{ art.name }}</span>
       <span class="modal__description">{{ art.description }}</span>
       <div class="modal__price">
@@ -14,16 +15,16 @@
           :src="art.images[currentImage]"
           alt="Art Image"
         />
-      </div>
-      <div class="modal__slider__controls">
-        <button
-          class="modal__slider__controls--left"
-          @click="prevImage"
-        ></button>
-        <button
-          class="modal__slider__controls--right"
-          @click="nextImage"
-        ></button>
+        <div class="modal__slider__controls">
+          <button
+            class="modal__slider__controls--left"
+            @click="prevImage"
+          ></button>
+          <button
+            class="modal__slider__controls--right"
+            @click="nextImage"
+          ></button>
+        </div>
       </div>
     </div>
   </div>
