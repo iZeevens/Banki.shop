@@ -33,14 +33,14 @@
   flex-direction: column;
 }
 
-.art-card__price__old {
+.art-card__price--old {
   color: #A0A0A0;
   font-size: 14px;
   font-weight: 300;
   text-decoration: line-through;
 }
 
-.art-card__price__new {
+.art-card__price--new {
   color: #343030;
   font-size: 16px;
   font-weight: 700;

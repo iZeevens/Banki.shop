@@ -1,12 +1,12 @@
 <template>
   <div class="art-card">
-    <img class="art-card__image" :src="imageSrc" />
+    <img class="art-card__image" :src="imageSrc" alt="Art Image" />
     <div class="art-card__container">
       <span class="art-card__name">{{ name }}</span>
       <div class="art-card__details">
         <div class="art-card__price">
-          <span class="art-card__price__old">{{ oldPrice }}</span>
-          <span class="art-card__price__new">{{ newPrice }}</span>
+          <span class="art-card__price--old">{{ oldPrice }}</span>
+          <span class="art-card__price--new">{{ newPrice }}</span>
         </div>
         <div class="art-card__action">
           <button
