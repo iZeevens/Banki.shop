@@ -26,10 +26,16 @@
   margin-top: 24px;
 }
 
+.art-card__price {
+  display: flex;
+  flex-direction: column;
+}
+
 .art-card__price__old {
   color: #A0A0A0;
   font-size: 14px;
   font-weight: 300;
+  text-decoration: line-through;
 }
 
 .art-card__price__new {
@@ -44,4 +50,5 @@
   padding: 14px 30px 13px;
   font-size: 14px;
   font-weight: 700;
+  cursor: pointer;
 }

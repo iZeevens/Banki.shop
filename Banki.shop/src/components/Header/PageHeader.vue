@@ -14,6 +14,7 @@
         id="search"
         name="query"
         placeholder="Поиск по названию картины"
+        @input="handleSearch"
       />
       <button class="header__search-button">Найти</button>
     </div>
@@ -24,5 +25,10 @@
 import './pageHeader.css';
 export default {
   name: 'PageHeader',
+  methods: {
+    handleSearch(e) {
+      this.$emit('search', e.target.value)
+    }
+  }
 };
 </script>

@@ -40,7 +40,8 @@
   padding: 14px 36px;
   border: none;
   background-color: #403432;
-  color: #FFFFFF
+  color: #FFFFFF;
+  cursor: pointer;
 }
 
 .header__search-input::placeholder {

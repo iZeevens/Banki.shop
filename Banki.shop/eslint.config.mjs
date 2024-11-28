@@ -1,6 +1,5 @@
 import globals from 'globals';
 import pluginJs from '@eslint/js';
-import tseslint from 'typescript-eslint';
 import pluginVue from 'eslint-plugin-vue';
 import pluginPrettier from 'eslint-plugin-prettier';
 import configPrettier from 'eslint-config-prettier';
@@ -13,7 +12,7 @@ export default [
   ...pluginVue.configs['flat/essential'],
   {
     files: ['**/*.vue'],
-    languageOptions: { parserOptions: { parser: tseslint.parser } },
+    languageOptions: { parserOptions: { ecmaVersion: 2020, sourceType: 'module' } },
   },
   {
     files: ['**/*.{js,vue}'],

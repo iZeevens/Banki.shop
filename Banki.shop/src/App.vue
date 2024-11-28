@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <PageHeader />
-    <PageArtGalleryCards />
+    <PageHeader @search="handleSearch" />
+    <PageArtGalleryCards :searchQuery="searchQuery" />
   </div>
 </template>
 
@@ -16,6 +16,16 @@ export default Vue.extend({
   components: {
     PageHeader,
     PageArtGalleryCards,
+  },
+  data() {
+    return {
+      searchQuery: '',
+    };
+  },
+  methods: {
+    handleSearch(query) {
+      this.searchQuery = query;
+    },
   },
 });
 </script>
