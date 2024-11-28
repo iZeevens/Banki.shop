@@ -19,7 +19,7 @@
 - **HTML**
 
 ## Deployment
-You can access the deployed app here: [Arts App](https://graphiql-btomrzxgm-izeevens-projects.vercel.app/en)
+You can access the deployed app here: [Arts App](https://banki-shop.vercel.app/)
 
 ## Installation and Setup
 
