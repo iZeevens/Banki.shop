@@ -7,8 +7,15 @@ body {
   margin: 0;
 }
 
-#app {
+.container {
   max-width: 1216px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#app {
   margin: 0 auto;
   display: flex;
   flex-direction: column;

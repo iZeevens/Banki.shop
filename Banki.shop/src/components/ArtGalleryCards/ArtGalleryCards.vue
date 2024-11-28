@@ -1,15 +1,17 @@
 <template>
   <main class="main">
-    <h2>Картины эпохи Возрождения</h2>
-    <div class="cards">
-      <GalleryCard
-        v-for="card in filteredCards"
-        :key="card.name"
-        :imageSrc="card.imageSrc"
-        :name="card.name"
-        :newPrice="card.newPrice"
-        :oldPrice="card.oldPrice"
-      />
+    <div class="container">
+      <h2>Картины эпохи Возрождения</h2>
+      <div class="cards">
+        <GalleryCard
+          v-for="card in filteredCards"
+          :key="card.name"
+          :imageSrc="card.imageSrc"
+          :name="card.name"
+          :newPrice="card.newPrice"
+          :oldPrice="card.oldPrice"
+        />
+      </div>
     </div>
   </main>
 </template>
