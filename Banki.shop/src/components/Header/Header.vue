@@ -8,6 +8,7 @@
         <li class="header__nav-item">Контакты</li>
         <li class="header__nav-item">О компании</li>
       </nav>
+      <BurgerMenu />
       <div class="header__search">
         <input
           class="header__search-input"
@@ -28,9 +29,11 @@
 
 <script>
 import './header.css';
+import BurgerMenu from './BurgerMenu/BurgerMenu.vue';
 
 export default {
   name: 'PageHeader',
+  components: { BurgerMenu },
   data() {
     return {
       searchQuery: '',

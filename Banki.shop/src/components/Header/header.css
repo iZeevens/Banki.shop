@@ -75,6 +75,10 @@
 
 @media(max-width: 1010px) {
   .header__nav {
-    gap: 5%;
+    display: none;
+  }
+
+  .header .container {
+    justify-content: space-between;
   }
 }
