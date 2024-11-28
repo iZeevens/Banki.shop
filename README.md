@@ -19,7 +19,7 @@
 - **HTML**
 
 ## Deployment
-You can access the deployed app here: [GraphiQL App](https://graphiql-btomrzxgm-izeevens-projects.vercel.app/en)
+You can access the deployed app here: [Arts App](https://graphiql-btomrzxgm-izeevens-projects.vercel.app/en)
 
 ## Installation and Setup
 
