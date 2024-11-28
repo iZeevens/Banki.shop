@@ -1,8 +1,7 @@
-<!-- Change contain -->
 <template>
   <div class="art-card">
     <img class="art-card__image" :src="imageSrc" />
-    <div class="art-card__contain">
+    <div class="art-card__container">
       <span class="art-card__name">{{ name }}</span>
       <div class="art-card__details">
         <div class="art-card__price">
@@ -10,17 +9,21 @@
           <span class="art-card__price__new">{{ newPrice }}</span>
         </div>
         <div class="art-card__action">
-          <button class="art-card__buy-button">Купить</button>
+          <button class="art-card__buy-button" @click="handleBuy">
+            Купить
+          </button>
         </div>
       </div>
+      <Spinner :isLoading="isLoading" />
     </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
+import Spinner from '../../ui/Spinner/Spinner.vue';
 import './galleryCard.css';
-export default Vue.extend({
+
+export default {
   name: 'GalleryCard',
   props: {
     imageSrc: {
@@ -40,5 +43,19 @@ export default Vue.extend({
       required: false,
     },
   },
-});
+  components: { Spinner },
+  data() {
+    return {
+      isLoading: false,
+    };
+  },
+  methods: {
+    handleBuy() {
+      this.isLoading = true;
+      setTimeout(() => {
+        this.isLoading = false;
+      }, 2000);
+    },
+  },
+};
 </script>

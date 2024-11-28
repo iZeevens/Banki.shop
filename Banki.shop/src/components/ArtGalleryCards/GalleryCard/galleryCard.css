@@ -15,8 +15,10 @@
   color: #343030
 }
 
-.art-card__contain {
+.art-card__container {
   padding: 20px 24px 24px;
+  position: relative;
+
 }
 
 .art-card__details {
