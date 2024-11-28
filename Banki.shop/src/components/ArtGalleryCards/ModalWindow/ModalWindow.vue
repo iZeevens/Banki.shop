@@ -37,7 +37,7 @@ export default {
   props: {
     art: {
       type: Object,
-      required: true,
+      required: false,
     },
     isVisible: {
       type: Boolean,
