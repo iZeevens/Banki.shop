@@ -47,7 +47,6 @@ export default {
   computed: {
     filteredCards() {
       const query = this.searchQuery.toLowerCase();
-      console.log(this.cards);
       return this.cards.filter((card) =>
         card.name.toLowerCase().includes(query),
       );

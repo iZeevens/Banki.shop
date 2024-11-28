@@ -20,6 +20,7 @@ export default Vue.extend({
   data() {
     return {
       searchQuery: '',
+      isLoading: true,
     };
   },
   methods: {
