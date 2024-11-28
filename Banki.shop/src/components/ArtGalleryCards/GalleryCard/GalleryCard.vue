@@ -65,12 +65,28 @@ export default {
       return this.isPurchased ? 'purchased' : '';
     },
   },
+  created() {
+    const purchasedItems =
+      JSON.parse(localStorage.getItem('purchasedItems')) || [];
+    this.isPurchased = purchasedItems.includes(this.name);
+  },
   methods: {
     handleBuy() {
       this.isLoading = true;
       setTimeout(() => {
         this.isLoading = false;
         this.isPurchased = !this.isPurchased;
+
+        let purchasedItems =
+          JSON.parse(localStorage.getItem('purchasedItems')) || [];
+
+        if (this.isPurchased) {
+          purchasedItems.push(this.name);
+        } else {
+          purchasedItems = purchasedItems.filter((item) => item !== this.name);
+        }
+
+        localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
       }, 2000);
     },
   },
