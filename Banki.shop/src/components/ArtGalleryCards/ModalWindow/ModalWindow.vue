@@ -16,8 +16,14 @@
         />
       </div>
       <div class="modal__slider__controls">
-        <button class="modal__slider__controls--left"></button>
-        <button class="modal__slider__controls--right"></button>
+        <button
+          class="modal__slider__controls--left"
+          @click="prevImage"
+        ></button>
+        <button
+          class="modal__slider__controls--right"
+          @click="nextImage"
+        ></button>
       </div>
     </div>
   </div>
@@ -46,6 +52,21 @@ export default {
   methods: {
     closeModal() {
       this.$emit('update:isVisible', false);
+    },
+    nextImage() {
+      if (this.art.images.length - 1 === this.currentImage) {
+        return (this.currentImage = 0);
+      }
+
+      this.currentImage += 1;
+    },
+
+    prevImage() {
+      if (this.currentImage === 0) {
+        return (this.currentImage = this.art.images.length - 1);
+      }
+
+      this.currentImage -= 1;
     },
   },
 };

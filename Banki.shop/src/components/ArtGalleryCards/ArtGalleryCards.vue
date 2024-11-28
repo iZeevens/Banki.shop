@@ -45,8 +45,8 @@ export default {
           imageSrc: 'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
           images: [
             'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
-            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
-            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmZxUmMcJqs26sq93NqnGlAWI37PTRuJWKHQ&s',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBPTfmtPp6llRRntIY_CMjlNYigqB-HYc0sg&s',
           ],
           name: '«Рождение Венеры» Сандро Боттичелли',
           description: 'bla bla bla',
