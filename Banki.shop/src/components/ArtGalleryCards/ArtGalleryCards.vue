@@ -10,10 +10,15 @@
           :name="card.name"
           :newPrice="card.newPrice"
           :oldPrice="card.oldPrice"
+          @click="openModal(card)"
         />
       </div>
     </div>
-    <ModalWindow :isVisible="true" :art="cards[0]" />
+    <ModalWindow
+      :isVisible="isModalVisible"
+      :art="selectedCard"
+      @update:isVisible="isModalVisible = $event"
+    />
   </main>
 </template>
 
@@ -33,6 +38,8 @@ export default {
   },
   data() {
     return {
+      isModalVisible: false,
+      selectedCard: null,
       cards: [
         {
           imageSrc: 'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
@@ -67,6 +74,12 @@ export default {
       return this.cards.filter((card) =>
         card.name.toLowerCase().includes(query),
       );
+    },
+  },
+  methods: {
+    openModal(card) {
+      this.isModalVisible = true;
+      this.selectedCard = card;
     },
   },
 };

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="modal-overlay" v-if="isVisible"></div>
+    <div class="modal-overlay" v-if="isVisible" @click="closeModal"></div>
     <div class="modal" v-if="isVisible">
       <span class="modal__name">{{ art.name }}</span>
       <span class="modal__description">{{ art.description }}</span>
@@ -42,6 +42,11 @@ export default {
     return {
       currentImage: 0,
     };
+  },
+  methods: {
+    closeModal() {
+      this.$emit('update:isVisible', false);
+    },
   },
 };
 </script>

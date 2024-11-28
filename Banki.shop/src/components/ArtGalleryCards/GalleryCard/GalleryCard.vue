@@ -1,6 +1,11 @@
 <template>
   <div class="art-card">
-    <img class="art-card__image" :src="imageSrc" alt="Art Image" />
+    <img
+      class="art-card__image"
+      :src="imageSrc"
+      alt="Art Image"
+      @click="handleClick"
+    />
     <div class="art-card__container">
       <span class="art-card__name">{{ name }}</span>
       <div class="art-card__details">
@@ -90,6 +95,9 @@ export default {
 
         localStorage.setItem('purchasedItems', JSON.stringify(purchasedItems));
       }, 2000);
+    },
+    handleClick() {
+      this.$emit('click', this);
     },
   },
 };
