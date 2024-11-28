@@ -10,11 +10,14 @@
       </nav>
       <address class="footer__info">
         <span class="footer__info-phone"
-          ><img :src="phoneSrc" alt="Phone icon" />+7 (812) 555-55-55</span
+          ><img :src="require('../../public/phone.png')" alt="Phone icon" />+7
+          (812) 555-55-55</span
         >
         <span class="footer__info-address"
-          ><img :src="addressSrc" alt="Address icon" />г. Санкт-Петербург, ул.
-          Ефимова, 3</span
+          ><img
+            :src="require('../../public/address.png')"
+            alt="Address icon"
+          />г. Санкт-Петербург, ул. Ефимова, 3</span
         >
       </address>
     </div>
@@ -23,15 +26,7 @@
 
 <script>
 import './footer.css';
-import phoneSrc from '../../public/phone.png';
-import addressSrc from '../../public/address.png';
 export default {
   name: 'PageFooter',
-  data() {
-    return {
-      phoneSrc,
-      addressSrc,
-    };
-  },
 };
 </script>

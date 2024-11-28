@@ -13,16 +13,18 @@
         />
       </div>
     </div>
+    <ModalWindow :isVisible="true" :art="cards[0]" />
   </main>
 </template>
 
 <script>
 import './artGalleryCards.css';
 import GalleryCard from './GalleryCard/GalleryCard.vue';
+import ModalWindow from './ModalWindow/ModalWindow.vue';
 
 export default {
   name: 'PageArtGalleryCards',
-  components: { GalleryCard },
+  components: { GalleryCard, ModalWindow },
   props: {
     searchQuery: {
       type: String,
@@ -34,13 +36,25 @@ export default {
       cards: [
         {
           imageSrc: 'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+          images: [
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+          ],
           name: '«Рождение Венеры» Сандро Боттичелли',
+          description: 'bla bla bla',
           newPrice: '1 000 000$',
           oldPrice: '2 000 000$',
         },
         {
           imageSrc: 'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+          images: [
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+          ],
           name: '«Мона Лиза» Леонардо да Винчи',
+          description: 'bla bla bla',
           newPrice: '2 000 000$',
           oldPrice: '2 500 000$',
         },

@@ -32,16 +32,10 @@ export default {
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[path][name].[hash].[ext]',
-              outputPath: 'images/',
-              publicPath: 'images',
-            },
-          },
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][hash][ext][query]',
+        },
       },
     ],
   },
