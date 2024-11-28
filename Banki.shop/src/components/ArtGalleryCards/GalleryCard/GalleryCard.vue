@@ -1,5 +1,5 @@
 <template>
-  <div class="art-card">
+  <div class="art-card" :class="{ sold: isSold }">
     <img
       class="art-card__image"
       :src="imageSrc"
@@ -9,24 +9,27 @@
     <div class="art-card__container">
       <span class="art-card__name" @click="handleClick">{{ name }}</span>
       <div class="art-card__details">
-        <div class="art-card__price">
-          <span class="art-card__price--old">{{ oldPrice }}</span>
-          <span class="art-card__price--new">{{ newPrice }}</span>
-        </div>
-        <div class="art-card__action">
-          <button
-            class="art-card__buy-button"
-            :class="buttonClass"
-            @click="handleBuy"
-          >
-            <img
-              v-if="isPurchased"
-              :src="require('../../../public/check_img.png')"
-              alt="Check"
-            />
-            {{ buttonText }}
-          </button>
-        </div>
+        <span v-if="isSold" class="art-card__sold"> Продана на аукционе</span>
+        <template v-else>
+          <div class="art-card__price">
+            <span class="art-card__price--old">{{ oldPrice }}</span>
+            <span class="art-card__price--new">{{ newPrice }}</span>
+          </div>
+          <div class="art-card__action">
+            <button
+              class="art-card__buy-button"
+              :class="buttonClass"
+              @click="handleBuy"
+            >
+              <img
+                v-if="isPurchased"
+                :src="require('../../../public/check_img.png')"
+                alt="Check"
+              />
+              {{ buttonText }}
+            </button>
+          </div>
+        </template>
       </div>
       <Spinner :isLoading="isLoading" />
     </div>
@@ -54,6 +57,10 @@ export default {
     },
     oldPrice: {
       type: String,
+      required: false,
+    },
+    isSold: {
+      type: Boolean,
       required: false,
     },
   },

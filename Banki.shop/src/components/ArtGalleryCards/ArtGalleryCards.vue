@@ -10,6 +10,7 @@
           :name="card.name"
           :newPrice="card.newPrice"
           :oldPrice="card.oldPrice"
+          :isSold="card.isSold"
           @click="openModal(card)"
         />
       </div>
@@ -60,10 +61,34 @@ export default {
             'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
             'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
           ],
-          name: '«Мона Лиза» Леонардо да Винчи',
+          name: '«Тайная вечеря»  Леонардо да Винчи',
           description: 'bla bla bla',
-          newPrice: '2 000 000$',
-          oldPrice: '2 500 000$',
+          newPrice: '3 000 000$',
+        },
+        {
+          imageSrc: 'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+          images: [
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+          ],
+          name: '«Сотворение Адама» Микеланджело',
+          description: 'bla bla bla',
+          newPrice: '6 000 000$',
+          oldPrice: '5 000 000$',
+        },
+        {
+          imageSrc: 'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+          images: [
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+            'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
+          ],
+          name: '«Сотворение Адама» Микеланджело',
+          description: 'bla bla bla',
+          newPrice: '5 000 000$',
+          oldPrice: '6 000 000$',
+          isSold: true,
         },
       ],
     };
