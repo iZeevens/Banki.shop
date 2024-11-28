@@ -14,21 +14,30 @@
         id="search"
         name="query"
         placeholder="Поиск по названию картины"
-        @input="handleSearch"
+        v-model="searchQuery"
+        @keyup.enter="triggerSearch"
       />
-      <button class="header__search-button">Найти</button>
+      <button class="header__search-button" @click="triggerSearch">
+        Найти
+      </button>
     </div>
   </header>
 </template>
 
 <script>
 import './pageHeader.css';
+
 export default {
   name: 'PageHeader',
+  data() {
+    return {
+      searchQuery: '',
+    };
+  },
   methods: {
-    handleSearch(e) {
-      this.$emit('search', e.target.value)
-    }
-  }
+    triggerSearch() {
+      this.$emit('search', this.searchQuery);
+    },
+  },
 };
 </script>
