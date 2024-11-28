@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="main">
     <h2>Картины эпохи Возрождения</h2>
     <div class="cards">
       <GalleryCard
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import './pageArtGalleryCards.css';
+import './artGalleryCards.css';
 import GalleryCard from './GalleryCard/GalleryCard.vue';
 
 export default {

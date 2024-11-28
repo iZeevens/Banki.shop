@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #ECEAEA;
+  padding: 38px;
+}
+
+.footer__nav {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.footer__nav-item {
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  color: #555555;
+  list-style-type: none; 
+}
+
+.footer__info {
+  display: flex;
+}
+
+.footer__info-phone {
+  display: flex;
+  align-items: center;
+}
+
+.footer__info-address {
+  display: flex;
+  align-items: center;
+}

@@ -54,7 +54,7 @@ export default {
     return {
       isLoading: false,
       isPurchased: false,
-      checkImg: checkImg,
+      checkImg,
     };
   },
   computed: {
