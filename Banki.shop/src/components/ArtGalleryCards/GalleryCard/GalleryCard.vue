@@ -9,8 +9,13 @@
           <span class="art-card__price__new">{{ newPrice }}</span>
         </div>
         <div class="art-card__action">
-          <button class="art-card__buy-button" @click="handleBuy">
-            Купить
+          <button
+            class="art-card__buy-button"
+            :class="buttonClass"
+            @click="handleBuy"
+          >
+            <img v-if="isPurchased" :src="checkImg" alt="Check" />
+            {{ buttonText }}
           </button>
         </div>
       </div>
@@ -21,6 +26,7 @@
 
 <script>
 import Spinner from '../../ui/Spinner/Spinner.vue';
+import checkImg from '../../../public/check_img.png';
 import './galleryCard.css';
 
 export default {
@@ -47,13 +53,24 @@ export default {
   data() {
     return {
       isLoading: false,
+      isPurchased: false,
+      checkImg: checkImg,
     };
+  },
+  computed: {
+    buttonText() {
+      return this.isPurchased ? 'В корзине' : 'Купить';
+    },
+    buttonClass() {
+      return this.isPurchased ? 'purchased' : '';
+    },
   },
   methods: {
     handleBuy() {
       this.isLoading = true;
       setTimeout(() => {
         this.isLoading = false;
+        this.isPurchased = !this.isPurchased;
       }, 2000);
     },
   },

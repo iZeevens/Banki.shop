@@ -47,10 +47,21 @@
 }
 
 .art-card__buy-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  gap: 1px;
   color: #F4F6F9;
   background-color: #382E2B;
-  padding: 14px 30px 13px;
+  width: 118px;
+  height: 48px;
   font-size: 14px;
   font-weight: 700;
+  white-space: nowrap;
   cursor: pointer;
+}
+
+.purchased {
+  background-color: #5B3A32
 }
