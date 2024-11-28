@@ -8,11 +8,13 @@
 .art-card__image {
   max-height: 160px;
   height: 100%;
+  cursor: pointer;
 }
 
 .art-card__name {
   font-size: 18px;
-  color: #343030
+  color: #343030;
+  cursor: pointer;
 }
 
 .art-card__container {
@@ -60,6 +62,12 @@
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
+}
+
+.art-card__buy-button:hover {
+  background-color: #776763;
+  color: #F4F6F9;
+  transition: 0.3s;
 }
 
 .purchased {

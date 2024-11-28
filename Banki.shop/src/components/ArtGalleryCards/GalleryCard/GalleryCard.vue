@@ -7,7 +7,7 @@
       @click="handleClick"
     />
     <div class="art-card__container">
-      <span class="art-card__name">{{ name }}</span>
+      <span class="art-card__name" @click="handleClick">{{ name }}</span>
       <div class="art-card__details">
         <div class="art-card__price">
           <span class="art-card__price--old">{{ oldPrice }}</span>

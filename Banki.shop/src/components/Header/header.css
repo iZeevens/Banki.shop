@@ -36,6 +36,7 @@
   box-sizing: border-box;
   width: 80%;
   max-width: 294px;
+  min-width: 240px;
   height: 48px;
   padding-left: 16px;
   border: 1px solid #E1E1E1;
@@ -53,7 +54,27 @@
   cursor: pointer;
 }
 
+.header__search-button:hover {
+  background-color: #776763;
+  color: #F4F6F9;
+  transition: 0.3s;
+}
+
 .header__search-input::placeholder {
   font-size: 14px;
   color: #9F9F9F;
+}
+
+
+@media(max-width: 1140px) {
+  .header__search {
+    margin-left: 5%;
+    width: auto;
+  }
+}
+
+@media(max-width: 1010px) {
+  .header__nav {
+    gap: 5%;
+  }
 }
