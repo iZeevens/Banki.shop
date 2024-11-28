@@ -14,12 +14,10 @@
           :src="art.images[currentImage]"
           alt="Art Image"
         />
-        <div class="modal__slider__controls">
-          <button class="modal__slider__controls--left">
-            <img :src="require('../art.png')" alt="" />
-          </button>
-          <button class="modal__slider__controls--right"></button>
-        </div>
+      </div>
+      <div class="modal__slider__controls">
+        <button class="modal__slider__controls--left"></button>
+        <button class="modal__slider__controls--right"></button>
       </div>
     </div>
   </div>

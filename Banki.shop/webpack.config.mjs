@@ -2,7 +2,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { VueLoaderPlugin } from 'vue-loader';
-import { type } from 'os';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 

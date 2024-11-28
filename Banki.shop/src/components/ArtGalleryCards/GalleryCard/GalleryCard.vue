@@ -14,7 +14,11 @@
             :class="buttonClass"
             @click="handleBuy"
           >
-            <img v-if="isPurchased" :src="checkImg" alt="Check" />
+            <img
+              v-if="isPurchased"
+              :src="require('../../../public/check_img.png')"
+              alt="Check"
+            />
             {{ buttonText }}
           </button>
         </div>
@@ -26,7 +30,6 @@
 
 <script>
 import Spinner from '../../ui/Spinner/Spinner.vue';
-import checkImg from '../../../public/check_img.png';
 import './galleryCard.css';
 
 export default {
@@ -54,7 +57,6 @@ export default {
     return {
       isLoading: false,
       isPurchased: false,
-      checkImg,
     };
   },
   computed: {
