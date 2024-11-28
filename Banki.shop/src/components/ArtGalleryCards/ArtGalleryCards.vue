@@ -1,7 +1,7 @@
 <template>
   <main class="main">
     <div class="container">
-      <h2>Картины эпохи Возрождения</h2>
+      <h2 class="main__name">Картины эпохи Возрождения</h2>
       <div class="cards">
         <GalleryCard
           v-for="card in filteredCards"
@@ -36,6 +36,7 @@ export default {
           imageSrc: 'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',
           name: '«Рождение Венеры» Сандро Боттичелли',
           newPrice: '1 000 000$',
+          oldPrice: '2 000 000$',
         },
         {
           imageSrc: 'https://cdn.nur.kz/images/1120x630/f5f1fbe856ddf827.jpeg',

@@ -7,6 +7,11 @@
   flex-grow: 1;
 }
 
+.main__name {
+  margin-top: 48px;
+  margin-bottom: 41px;
+}
+
 .main .container {
   flex-direction: column;
   align-items: flex-start;

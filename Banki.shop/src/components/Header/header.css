@@ -1,3 +1,11 @@
+.header {
+  padding: 24px;
+}
+
+.header .container {
+  justify-content: flex-end;
+}
+
 .header__nav {
   display: flex;
   align-items: center;
@@ -23,7 +31,7 @@
   width: 80%;
   max-width: 294px;
   height: 48px;
-  padding: 13px 60px 14px 16px;
+  padding-left: 16px;
   border: 1px solid #E1E1E1;
   background-color: #F6F3F3;
 }
