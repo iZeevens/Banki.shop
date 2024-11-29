@@ -44,6 +44,9 @@
 }
 
 .header__search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 122px; 
   width: 122px;
   height: 48px;
@@ -89,9 +92,17 @@
   }
 }
 
-@media(max-width: 500px) {
-  .header__search {
-    flex-direction: column;
-    align-items: flex-end;
+@media(max-width: 440px) {
+  .header__search-button {
+    width: 90px;
+  }
+
+  .header__search-input {
+    min-width: 200px;
+    padding-left: 6px;
+  }
+
+  .header__search-input::placeholder {
+    font-size: 12px;
   }
 }
