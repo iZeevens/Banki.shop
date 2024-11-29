@@ -16,7 +16,7 @@
 
 .burger__menu-line {
   height: 4px;
-  width: 18px;
+  width: 100%; 
   background-color: #333;
   border-radius: 4px;
   transition: transform 0.3s ease, background-color 0.3s ease; 
@@ -27,11 +27,11 @@
 }
 
 .burger-menu.active .burger-line-1 {
-  transform: translateY(8px) rotate(45deg);
+  transform: translate(0, 8px) rotate(45deg);
 }
 
 .burger-menu.active .burger-line-2 {
-  transform: translateY(-10px) rotate(-45deg);
+  transform: translate(0, -8px) rotate(-45deg);
 }
 
 .burger__nav {
