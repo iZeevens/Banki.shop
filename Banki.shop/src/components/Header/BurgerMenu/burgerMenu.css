@@ -15,9 +15,8 @@
 }
 
 .burger__menu-line {
-  width: 100%;
   height: 4px;
-  min-width: 18px;
+  width: 18px;
   background-color: #333;
   border-radius: 4px;
   transition: transform 0.3s ease, background-color 0.3s ease; 
